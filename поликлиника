@@ -1,8 +1,11 @@
 int oldLadies = 14;
 int receptionMinetsTime = 10;
 int minetsPerHour = 60;
-int waitingHours = oldLadies * receptionMinetsTime / minetsPerHour;
-int waitingMinets = oldLadies * receptionMinetsTime % minetsPerHour;
+int waitingHours;
+int waitingMinets;
+
+waitingHours = oldLadies * receptionMinetsTime / minetsPerHour;
+waitingMinets = oldLadies * receptionMinetsTime % minetsPerHour;
 
 Console.WriteLine($"Время ожидания в очереди {waitingHours} часов и {waitingMinets} минут.");
 Console.ReadKey();
