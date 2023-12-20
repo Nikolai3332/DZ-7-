@@ -1,13 +1,8 @@
-int OldLadies = 14;
-int receptionTime = 10;
-int hour;
-int minets;
-int allTime;
-int timeConverter = 60;
+int oldLadies = 14;
+        int receptionMinetsTime = 10;
+        int minetsPerHour = 60;
+        int waitingHours = oldLadies * receptionMinetsTime / minetsPerHour;
+        int waitingMinets = oldLadies * receptionMinetsTime % minetsPerHour;
 
-allTime = (receptionTime * OldLadies);
-hour = allTime / timeConverter;
-minets = allTime % timeConverter;
-
-Console.WriteLine($"Время ожидания в очереди {hour} часов и {minets} минут.");
-Console.ReadKey();
+        Console.WriteLine($"Время ожидания в очереди {waitingHours} часов и {waitingMinets} минут.");
+        Console.ReadKey();
